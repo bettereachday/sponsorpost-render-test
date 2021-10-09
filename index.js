@@ -10,6 +10,9 @@ app.get('/*', function (req, res) {
     var url = 'https://www.sponsorpost.co/host/test/sponsorpost.logo.png';
     console.log('/fileThumbnail going to url', url);
     console.log('referer:', req.headers.referrer || req.headers.referer);
+    console.dir('req.originalUrl', req.originalUrl);
+    console.dir('req.baseUrl', req.baseUrl);
+    console.dir('req.path', req.path);
     console.log('req.headers', req.headers);
     request.get(url).pipe(res);
 });
