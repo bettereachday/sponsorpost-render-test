@@ -9,7 +9,9 @@ var request = require('request');
 app.get('/*', function (req, res) {
     var url = 'https://www.sponsorpost.co/host/test/sponsorpost.logo.png';
     console.log('/fileThumbnail going to url', url);
-    console.log('referer:', req.headers.referer);
+    console.log('referer:', req.headers.referrer || req.headers.referer);
+    console.log('req.headers', req.headers);
+    req.headers
     request.get(url).pipe(res);
 });
 
