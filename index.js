@@ -11,3 +11,5 @@ app.get('/*', function (req, res) {
     logger.info('/fileThumbnail going to url', url);
     request.get(url).pipe(res);
 });
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
