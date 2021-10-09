@@ -11,7 +11,6 @@ app.get('/*', function (req, res) {
     console.log('/fileThumbnail going to url', url);
     console.log('referer:', req.headers.referrer || req.headers.referer);
     console.log('req.headers', req.headers);
-    req.headers
     request.get(url).pipe(res);
 });
 
